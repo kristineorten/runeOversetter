@@ -22,7 +22,7 @@ class Runeoversetter {
             System.out.println("Skriv inn teksten du vil oversette til runer:");
 
             Scanner lesInput = new Scanner(System.in);
-            String input = lesInput.nextLine();
+            String input = lesInput.nextLine().toUpperCase();
             char[] bokstaver = input.toCharArray();
             String runer = "";
 
@@ -33,9 +33,11 @@ class Runeoversetter {
                     neste = Character.toString(bokstaver[i+1]);
                 }
 
-                if (erTall(denne)) {
+                if (erTall(denne) || denne.equals(" ")) {
                     runer += denne;
                 } else {
+                    try {lesFil = new Scanner(new File(filnavn));}
+                    catch (FileNotFoundException e) {}
                     runer += oversett(denne, neste, lesFil);
                 }
             }
@@ -46,10 +48,13 @@ class Runeoversetter {
     }
 
     public static String oversett(String denne, String neste, Scanner lesFil) {
-        String rune = "?";
+        String rune = "";
 
         while (lesFil.hasNext()) {
             String linje = lesFil.nextLine();
+            if (linje.equals("")) {
+                linje = lesFil.nextLine();
+            }
             String[] linjebiter = linje.split(" ");
             String latinskBokstav = linjebiter[0];
             String runeBokstav = linjebiter[1];
@@ -61,7 +66,6 @@ class Runeoversetter {
                 } else {
                     rune = runeBokstav;
                 }
-                return rune;
             }
         }
 
