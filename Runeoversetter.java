@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 class Runeoversetter {
+    static boolean hoppOver = false;
+
     public static void main(String[] args) {
         boolean filFunnet = false;
 
@@ -38,7 +40,12 @@ class Runeoversetter {
                 } else {
                     try {lesFil = new Scanner(new File(filnavn));}
                     catch (FileNotFoundException e) {}
-                    runer += oversett(denne, neste, lesFil);
+                    if (!hoppOver) {
+                        String nyRune = oversett(denne, neste, lesFil);
+                        runer += nyRune;
+                    } else {
+                        hoppOver = false;
+                    }
                 }
             }
 
@@ -60,9 +67,12 @@ class Runeoversetter {
             String runeBokstav = linjebiter[1];
 
             if (denne.equals(latinskBokstav)) {
-                String nesteRune = lesFil.nextLine().split(" ")[1];
-                if ((denne += neste).equals(nesteRune)) {
+                String[] nesteLinje_biter = lesFil.nextLine().split(" ");
+                String nesteKombo = nesteLinje_biter[0];
+                String nesteRune = nesteLinje_biter[1];
+                if ((denne + neste).equals(nesteKombo)) {
                     rune = nesteRune;
+                    hoppOver = true;
                 } else {
                     rune = runeBokstav;
                 }
