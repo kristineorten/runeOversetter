@@ -31,10 +31,9 @@
 <h2>Types of Data Collected</h2>
 <h3>Personal Data</h3>
 <p>While using Our Service, We will not ask You to provide Us with personally identifiable information that can be used to contact or identify You.</p>
-<p>The Company may use Personal Data to attend and manage Your requests to Us, which means that by sending us an email you agree to let us save that emailaddress for a limited amount of time so that we can use that email to answer you.</p>
+<p>The Company may use Personal Data to attend and manage Your requests to Us, which means that by sending us an email you agree to let us save that email address for a limited amount of time so that we can use that email to answer you.</p>
 <h3>Usage Data</h3>
 <p>Usage Data is not collected when using the Service.</p>
-<p>We will not share Your personal information, as we do not collect it:</p>
 <h2>Retention of Your Personal Data</h2>
 <p>The Company will not retain Your Personal Data or your Usage Data.</p>
 <h1>Children's Privacy</h1>
