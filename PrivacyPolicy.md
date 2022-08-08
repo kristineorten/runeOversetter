@@ -30,14 +30,15 @@
 <h1>Collecting and Using Your Personal Data</h1>
 <h2>Types of Data Collected</h2>
 <h3>Personal Data</h3>
-<p>While using Our Service, We will not ask You to provide Us with personally identifiable information that can be used to contact or identify You.</p>
-<p>The Company may use Personal Data to attend and manage Your requests to Us, which means that by sending us an email you agree to let us save that email address for a limited amount of time so that we can use that email to answer you.</p>
+<p>We do not knowingly collect or use personally identifiable information that can be used to contact or identify you. The only exception is that The Company may use Personal Data to attend and manage Your requests to Us, which means that by sending us an email you agree to let us save that email address for a limited amount of time so that we can use that email to answer you.</p>
 <h3>Usage Data</h3>
 <p>Usage Data is not collected when using the Service.</p>
 <h2>Retention of Your Personal Data</h2>
-<p>The Company will not retain Your Personal Data or your Usage Data.</p>
+<p>The Company does not retain Your Personal Data or your Usage Data.</p>
 <h1>Children's Privacy</h1>
 <p>We do not knowingly collect personally identifiable information from anyone, this also includes children under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information.</p>
+<h1>Ads</h1>
+<p>Our Service may contain ads. We use Google AdMob. We strongly advise You to review their Privacy Policy. We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
 <h1>Links to Other Websites</h1>
 <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
 <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
