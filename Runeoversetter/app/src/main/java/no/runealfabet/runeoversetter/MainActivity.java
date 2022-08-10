@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -24,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }};
     private String chosenRuneType = "middelalderruner";
     private boolean skipNextLetter = false;
+
     public static final String ORIGINAL_MESSAGE = "no.runealfabet.runeoversetter.ORIGINAL_MESSAGE";
     public static final String TRANSLATED_MESSAGE = "no.runealfabet.runeoversetter.TRANSLATED_MESSAGE";
     public static final String CHOSEN_RUNE_TYPE = "no.runealfabet.runeoversetter.CHOSEN_RUNE_TYPE";
@@ -100,16 +100,16 @@ public class MainActivity extends AppCompatActivity {
 
         // Converting from letters to runes
         for (int i = 0; i < letters.length; i++) {
-            String nextLetter = "";
-            if ((i+1) < letters.length) {
-                nextLetter = Character.toString(letters[i+1]);
-            }
-
             if (!Character.isLetter(letters[i])) {
                 // Do not convert numbers, spaces and other symbols not in the alphabet
                 runes.append(letters[i]);
             } else {
                 String thisLetter = Character.toString(letters[i]);
+                String nextLetter = "";
+                if ((i+1) < letters.length) {
+                    nextLetter = Character.toString(letters[i+1]);
+                }
+
                 // Convert letter to rune and add to the result
                 if (!skipNextLetter) {
                     String nyRune = stringToRune(thisLetter, nextLetter, runeList);
@@ -124,8 +124,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        EditText editText = (EditText) findViewById(R.id.textUserInput);
-        Log.d("EditText",""+editText);
+        EditText editText = findViewById(R.id.textUserInput);
         String userInput = editText.getText().toString();
         String runes = toRunes(userInput);
 
