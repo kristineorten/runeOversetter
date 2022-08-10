@@ -1,6 +1,6 @@
 # Gradle files
-Runeoversetter/.gradle/
-Runeoversetter/build/
+.gradle/
+build/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -9,11 +9,11 @@ local.properties
 *.log
 
 # Android Studio generated files and folders
-Runeoversetter/captures/
-Runeoversetter/.externalNativeBuild/
-Runeoversetter/.cxx/
-Runeoversetter/*.apk
-Runeoversetter/output.json
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output.json
 
 # Keystore files
 *.jks
