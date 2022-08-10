@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Runeoversetter</string>
+    <string name="main_activity_label">Main Activity</string>
+    <string name="display_message_activity_label">Display Message Activity</string>
+    <string name="disclaimerText">Denne appen er bare laget for moroskyld og garanterer ikke historisk korrekthet</string>
+    <string name="submitText">Oversett</string>
+    <string name="defaultText">Skriv inn en tekst</string>
+    <string name="titleText">Oversett fra latinske bokstaver til runer</string>
+    <string name="infoText">Velg typen runer du vil oversette til. Merk at tall ikke vil oversettes.</string>
+    <string name="middelalderruner">Middelalderruner</string>
+    <string name="yngreFuthark">Yngre Futhark</string>
+    <string name="titleText2">Teksten du skrev inn:</string>
+    <string name="originalText">Error</string>
+    <string name="infoText2">Teksten oversatt til %1$s:</string>
+    <string name="translatedText">Error</string>
+    <string name="copyText">Kopier rune-teksten</string>
+</resources>
