@@ -1,4 +1,4 @@
-package com.example.runeoversetter;
+package no.runealfabet.runeoversetter;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.example.runeoversetter;
+package no.runealfabet.runeoversetter;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     }};
     private String chosenRuneType = "middelalderruner";
     private boolean skipNextLetter = false;
-    public static final String ORIGINAL_MESSAGE = "com.example.runeoversetter.ORIGINAL_MESSAGE";
-    public static final String TRANSLATED_MESSAGE = "com.example.runeoversetter.TRANSLATED_MESSAGE";
-    public static final String CHOSEN_RUNE_TYPE = "com.example.runeoversetter.CHOSEN_RUNE_TYPE";
+    public static final String ORIGINAL_MESSAGE = "no.runealfabet.runeoversetter.ORIGINAL_MESSAGE";
+    public static final String TRANSLATED_MESSAGE = "no.runealfabet.runeoversetter.TRANSLATED_MESSAGE";
+    public static final String CHOSEN_RUNE_TYPE = "no.runealfabet.runeoversetter.CHOSEN_RUNE_TYPE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +33,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
-        // Check which radio button was clicked
         if (view.getId() == R.id.middelalderruner && checked) {
             chosenRuneType = "middelalderruner";
         } else if (view.getId() == R.id.yngreFuthark && checked) {
@@ -69,15 +67,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return rune.trim();
-    }
-
-    public static boolean isNumber(String i) {
-        try {
-            Integer.parseInt(i);
-        } catch (NumberFormatException e) {
-            return false;
-        }
-        return true;
     }
 
     private List<String> getRuneList() {
@@ -115,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 nextLetter = Character.toString(letters[i+1]);
             }
 
-            if (isNumber(thisLetter) || thisLetter.equals(" ")) {
-                // Do not convert numbers and spaces
+            if (!Character.isLetter(Integer.parseInt(thisLetter))) {
+                // Do not convert numbers, spaces and other symbols not in the alphabet
                 runes.append(thisLetter);
             } else {
                 // Convert letter to rune and add to the result
@@ -132,8 +121,6 @@ public class MainActivity extends AppCompatActivity {
         return runes.toString();
     }
 
-
-    /** Called when the user taps the Send button */
     public void sendMessage(View view) {
         EditText editText = (EditText) findViewById(R.id.textUserInput);
         String userInput = editText.getText().toString();
