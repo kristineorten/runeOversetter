@@ -2,7 +2,7 @@
     <string name="app_name">Runeoversetter</string>
     <string name="main_activity_label">Main Activity</string>
     <string name="display_message_activity_label">Display Message Activity</string>
-    <string name="disclaimerText">Denne appen er bare laget for moroskyld og garanterer ikke historisk korrekthet</string>
+    <string name="disclaimerText">Denne appen er bare laget for moro skyld og garanterer ikke historisk korrekthet</string>
     <string name="submitText">Oversett</string>
     <string name="defaultText">Skriv inn en tekst</string>
     <string name="titleText">Oversett fra latinske bokstaver til runer</string>
